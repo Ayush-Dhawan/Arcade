@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: rgb(245, 198, 206);
+        }
+        .navbar ul{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .navbar{
+            background-color: black;
+        }
+
+        .navbar ul li{
+            margin-right: 70px;
+            font-weight: bolder;
+            font-size: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            list-style-type: none;
+        }
+
+        
+        #logo{
+            font-size: 30px;
+            color: white;
+            margin-top: 10px;
+            margin-bottom: 0px;
+            padding: 20px;
+            font-weight: bold;
+        }
+
+        .navbar ul li a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar ul li a:hover{
+            color: orange;
+        }
+
+        .button{
+            margin: 100px;
+
+            margin-top: 230px;
+            border-radius: 10px;
+            height: 200px;
+            width: 200px;
+            margin-left: 170px;
+        }
+        .buttons{
+            overflow: hidden;
+        }
+
+        .button:hover{
+            cursor: pointer;
+            box-shadow: rgb(224, 50, 11) 0px 20px 30px -10px;
+            transform: translateY(-0.25em)
+        }
+
+        #snake-button{
+            background: linear-gradient(rgb(240, 124, 124), rgb(228, 228, 129));
+            background-size: 220px 220px;
+            background-repeat: no-repeat;
+            background-position:center;
+            
+        }
+
+        #snake-button img{
+            height: 120px;
+            width: 120px;
+        }
+
+        #tictactoe-button{
+            background: linear-gradient(rgb(240, 124, 124), rgb(228, 228, 129));
+            background-size: 220px 220px;
+            background-repeat: no-repeat;
+            background-position:center;
+        }
+
+        #tictactoe-button img{
+            height: 120px;
+            width: 120px;
+        }
+
+        #diceGame-button img{
+            height: 120px;
+            width: 120px;
+        }
+
+        #diceGame-button{
+            background: linear-gradient(rgb(240, 124, 124), rgb(228, 228, 129));
+            background-size: 220px 220px;
+            background-repeat: no-repeat;
+            background-position:center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <span id="logo">MiniGame</span>
+                    <ul>
+                        <li><a href="payment.html">Donate</a></li>
+                        <li><a href="descriptions.html">Descriptions</a></li>
+                        <li><a href="game4.html">Dice-game</a></li>
+                        <li><a href="index.html">Snake game</a></li>
+                        <li><a href="tictactoe.html">tic-tac-toe game</a></li>
+                        <li><a href="home.html">Home</a></li>
+                    </ul>
+    </div>
+
+    <div class="buttons">
+        <button class="button" id="snake-button" onclick="window.open('index.html')"><img src="anaconda.png" alt=""></button>
+        <button class="button" id="tictactoe-button" onclick="window.open('tictactoe.html')"><img src="tictactoe.png" alt=""></button>
+        <button class="button" id="diceGame-button" onclick="window.open('game4.html')"><img src="dice-6.png" alt=""></button>
+    </div>
+</body>
+<script>
+
+</script>
+</html>
+
+

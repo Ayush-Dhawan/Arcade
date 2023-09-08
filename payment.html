@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
+<style>
+    *{
+        padding: 0;
+        margin: 0;  
+    }
+    
+    .navbar ul{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .navbar{
+            background-color: black;
+        }
+
+        .navbar ul li{
+            margin-right: 70px;
+            font-weight: bolder;
+            font-size: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            list-style-type: none;
+        }
+
+        
+        #logo{
+            font-size: 30px;
+            color: white;
+            margin-top: 10px;
+            margin-bottom: 0px;
+            padding: 20px;
+            font-weight: bold;
+        }
+
+        .navbar ul li a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar ul li a:hover{
+            color: orange;
+        }
+
+        body{
+            overflow: hidden;
+            background-color: black;
+        }
+
+        .buttons{
+            height: 50vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .donations{
+            padding: 80px;
+            margin: 50px;
+            border-radius: 20px;
+            font-size: larger;
+            background: linear-gradient(orange, orangered);
+        }
+
+        .donations:hover{
+            cursor: pointer;
+            box-shadow: yellow 0px 20px 30px -10px;
+            transform: translateY(-0.25em);
+        }
+
+        marquee{
+            color: orange;
+            margin-top: 50px;
+            font-size: x-large;
+            font-weight: 700;
+        }
+
+        .scroll-text{
+             height: 50px;
+        }
+
+        .QR{
+            margin-top: -20px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            height: 205px;
+            width: 200px;
+        }
+
+        .qr-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hidden{
+            transform: translateX(100%);
+        }
+        .show{
+            transform: translateX(-100%);
+        }
+
+        .QR img{
+            height: 200px;
+            width: 200px;
+        }
+
+        #img1{
+            transform: translateX(500%);
+        }
+        #img2{
+            transform: translateX(500%);
+        }
+        #img3{
+            transform: translateX(500%);
+        }
+
+        .choose{
+            margin-left: 650px;
+            color: orange;
+            font-size: x-large;
+        }
+
+
+</style>
+<body>
+    <div class="navbar">
+        <span id="logo">MiniGame</span>
+                    <ul>
+                        <li><a href="payment.html">Donate</a></li>
+                        <li><a href="descriptions.html">Descriptions</a></li>
+                        <li><a href="game4.html">Dice-game</a></li>
+                        <li><a href="index.html">Snake game</a></li>
+                        <li><a href="tictactoe.html">tic-tac-toe game</a></li>
+                        <li><a href="home.html">Home</a></li>
+                    </ul>
+    </div>
+
+    <div class="scroll-text">
+        <marquee behavior="scroll" direction="left" scrollamount="10">Your support matters!</marquee>
+    </div>
+    <div class="buttons">
+        <button class="donations" id="donation-1" >50₹</button>
+        <button class="donations" id="donation-2">100₹</button>
+        <button class="donations" id="donation-3">500₹</button>
+    </div>
+
+   <div class="qr-container">
+       <div class="QR">
+        <img src="50-qr.jpeg " alt="" class="" id="img1">
+        <img src="100-qr.jpeg" alt="" class="" id="img2">
+        <img src="500-qr.jpeg" alt="" class="" id="img3">
+    </div>
+   </div>
+
+   <span class="choose">How much will you donate?</span>
+
+   
+    
+    <script>
+        button1 = document.querySelector('#donation-1');
+        button2 = document.querySelector('#donation-2');
+        button3 = document.querySelector('#donation-3');
+
+        button1.addEventListener('click', function(){
+            button1.style.transform = 'translateY(-0.25em)';
+            button1.style.boxShadow = 'yellow 0px 20px 30px -10px';
+            button2.style.transform = 'translateY(0em)';
+            button2.style.boxShadow = 'none'
+            button3.style.transform = 'translateY(0em)';
+            button3.style.boxShadow = 'none'
+
+
+            document.querySelector('#img1').style.transform = 'translateX(100%)';
+            document.querySelector('#img2').style.transform = 'translateX(500%)';
+            document.querySelector('#img3').style.transform = 'translateX(500%)';
+
+        })
+         button2.addEventListener('click', function(){
+            button2.style.transform = 'translateY(-0.25em)';
+            button2.style.boxShadow = 'yellow 0px 20px 30px -10px';
+            button1.style.transform = 'translateY(0em)';
+            button1.style.boxShadow = 'none'
+            button3.style.transform = 'translateY(0em)';
+            button3.style.boxShadow = 'none'
+
+
+           document.querySelector('#img1').style.transform = 'translateX(500%)';
+            document.querySelector('#img2').style.transform = 'translateX(0%)';
+            document.querySelector('#img3').style.transform = 'translateX(500%)';
+
+        })
+         button3.addEventListener('click', function(){
+            button3.style.transform = 'translateY(-0.25em)';
+            button3.style.boxShadow = 'yellow 0px 20px 30px -10px';
+            button2.style.transform = 'translateY(0em)';
+            button2.style.boxShadow = 'none'
+            button1.style.transform = 'translateY(0em)';
+            button1.style.boxShadow = 'none'
+
+           document.querySelector('#img1').style.transform = 'translateX(500%)';
+            document.querySelector('#img2').style.transform = 'translateX(500%)';
+            document.querySelector('#img3').style.transform = 'translateX(-100%)';
+
+        })
+    </script>
+
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> -->
+</body>
+</html>
